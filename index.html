@@ -1,105 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Rithesh Donthoju | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#0b1220; color:#e6e6e6; }
-    header { padding: 48px 18px; text-align:center; background: linear-gradient(135deg,#111b33,#0b1220); }
-    h1 { margin: 0; font-size: 34px; }
-    p { max-width: 820px; margin: 12px auto; line-height: 1.6; color:#cbd5e1; }
-    .btns a { display:inline-block; margin: 10px 8px; padding: 10px 14px; border-radius: 10px; text-decoration:none; color:#0b1220; background:#22c55e; font-weight:600; }
-    .btns a.secondary { background:#93c5fd; }
-    .container { max-width: 980px; margin: 0 auto; padding: 26px 18px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-    .card { background:#101a33; border:1px solid #1f2a4a; border-radius:16px; padding: 16px; }
-    .card h3 { margin: 0 0 6px; }
-    .tag { display:inline-block; margin:6px 6px 0 0; padding: 6px 10px; border-radius:999px; background:#1f2a4a; color:#cbd5e1; font-size: 12px; }
-    footer { text-align:center; padding: 26px; color:#94a3b8; }
-    .links a { color:#93c5fd; text-decoration:none; }
-    .links a:hover { text-decoration:underline; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+      background: #ffffff;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      color: #1a73e8;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      margin-top: 20px;
+    }
+
+    .contact a {
+      color: #1a73e8;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .role {
+      font-weight: bold;
+    }
+
+    .date {
+      float: right;
+      font-style: italic;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Rithesh Donthoju</h1>
-    <p>
-      Master’s student in Data Science (UMBC). Interested in Software Engineering, Data Engineering, and Data Analytics.
-      I build APIs, data pipelines, dashboards, and ML solutions.
-    </p>
-    <div class="btns">
-      <a href="https://www.linkedin.com/in/rithesh-donthoju/" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a class="secondary" href="https://github.com/Rithesh4112" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="secondary" href="mailto:ritheshdonthoju04@gmail.com">Email</a>
-    </div>
-  </header>
-
   <div class="container">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Software Engineering</h3>
-        <div class="tag">Java</div><div class="tag">Spring Boot</div><div class="tag">REST APIs</div><div class="tag">Git</div>
-      </div>
-      <div class="card">
-        <h3>Data Engineering</h3>
-        <div class="tag">SQL</div><div class="tag">Spark</div><div class="tag">ETL</div><div class="tag">AWS</div>
-      </div>
-      <div class="card">
-        <h3>Analytics</h3>
-        <div class="tag">Tableau</div><div class="tag">Power BI</div><div class="tag">Python</div><div class="tag">Storytelling</div>
-      </div>
+
+    <h1>Rithesh Donthoju</h1>
+
+    <div class="contact">
+      📧 <a href="mailto:ritheshdonthoju04@gmail.com">ritheshdonthoju04@gmail.com</a>
+      📞 +1 (667) 345-4260 <br><br>
+      🔗 <a href="https://www.linkedin.com/in/rithesh-donthoju/" target="_blank">LinkedIn</a>
+      💻 <a href="https://github.com/Rithesh4112" target="_blank">GitHub</a>
     </div>
 
-    <h2 style="margin-top:22px;">Featured Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Midas Core – Transaction Processing & Balance Service</h3>
-        <p>
-          Built Kafka-based transaction processing, integrated an Incentives API, and exposed a GET /balance endpoint
-          (port 33400) to query user balances.
-        </p>
-        <div class="links">
-          <a href="https://github.com/Rithesh4112/forage-midas" target="_blank" rel="noreferrer">GitHub Repo →</a>
-        </div>
-        <div class="tag">Spring Boot</div><div class="tag">Kafka</div><div class="tag">REST</div>
-      </div>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Master’s in Data Science</strong>, University of Maryland, Baltimore County <span class="date">Aug 2024 – May 2026</span></li>
+      <li><strong>B.Tech in Electrical Communication Engineering</strong>, Guru Nanak Institute of Technology <span class="date">Jul 2020 – Aug 2024</span></li>
+    </ul>
 
-      <div class="card">
-        <h3>Insurance Dashboards (Tableau / Power BI)</h3>
-        <p>
-          Designed executive-style dashboards for policy trends, renewals, and agent performance using Salesforce-driven datasets.
-        </p>
-        <div class="tag">Tableau</div><div class="tag">Power BI</div><div class="tag">Salesforce</div>
-      </div>
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, Scala, Java, C++, C, JavaScript, PHP, Shell Scripting</li>
+      <li><strong>Databases & Warehousing:</strong> SQL (MySQL, Oracle, Postgres), Redshift, Snowflake, MongoDB</li>
+      <li><strong>Big Data:</strong> Hadoop, Spark</li>
+      <li><strong>Visualization:</strong> Tableau, Power BI, QuickSight, Looker, Dash, Matplotlib, Seaborn</li>
+      <li><strong>Cloud:</strong> AWS, Azure, Google Cloud</li>
+      <li><strong>Tools:</strong> Git, Jupyter Notebook, RapidResponse, MS Office</li>
+    </ul>
 
-      <div class="card">
-        <h3>RAG + Agentic AI KPI Assistant</h3>
-        <p>
-          Built a workflow for KPI deviation detection, trend analysis, and report automation using AWS services.
-        </p>
-        <div class="tag">AWS</div><div class="tag">LLMs</div><div class="tag">RAG</div>
-      </div>
-    </div>
+    <h2>Professional Experience</h2>
 
-    <h2 style="margin-top:22px;">Education</h2>
-    <div class="card">
-      <h3>UMBC — Master’s in Data Science</h3>
-      <p>Aug 2024 – May 2026 (expected)</p>
-    </div>
+    <h3>Data Engineer – Maryland Insurance Administration (MIA) <span class="date">Sep 2025 – Present</span></h3>
+    <ul>
+      <li>Designed automated ETL pipelines integrating Salesforce data into Power BI and Tableau dashboards.</li>
+      <li>Optimized SQL queries and schemas for scalable reporting models.</li>
+      <li>Implemented data governance and access controls aligned with state privacy regulations.</li>
+      <li>Reduced manual reporting effort by 40% through automation.</li>
+    </ul>
 
-    <h2 style="margin-top:22px;">Contact</h2>
-    <div class="card">
-      <p>Email: <b>ritheshdonthoju04@gmail.com</b></p>
-      <p>GitHub: <b>github.com/Rithesh4112</b></p>
-      <p>LinkedIn: <b>linkedin.com/in/rithesh-donthoju</b></p>
-    </div>
+    <h3>IT Intern – Maryland Insurance Administration (MIA) <span class="date">Jun 2025 – Aug 2025</span></h3>
+    <ul>
+      <li>Extracted, cleaned, and organized Salesforce data for analytics.</li>
+      <li>Monitored and troubleshot dashboard pipelines.</li>
+      <li>Created technical documentation and reporting guides.</li>
+    </ul>
+
+    <h3>Graduate Research Assistant (Volunteer), UMBC <span class="date">Dec 2024 – Jun 2025</span></h3>
+    <ul>
+      <li>Built data processing workflows using Python and SQL.</li>
+      <li>Created visual dashboards for international research collaboration.</li>
+    </ul>
+
+    <h3>Data Engineer Intern – Qualitest India Pvt Ltd <span class="date">Mar 2023 – Jul 2024</span></h3>
+    <ul>
+      <li>Developed ETL pipelines using Apache Airflow, AWS Lambda, and Snowflake.</li>
+      <li>Built real-time dashboards in Power BI and Tableau.</li>
+      <li>Improved reporting performance by 30%.</li>
+      <li>Created Python-based anomaly detection scripts.</li>
+    </ul>
+
+    <h2>Projects</h2>
+
+    <h3>AWS Real-Time Sales Analytics Pipeline</h3>
+    <ul>
+      <li>Built ETL pipelines using AWS Lambda, Glue, S3, and Athena.</li>
+      <li>Created QuickSight dashboards for revenue and churn KPIs.</li>
+      <li>Reduced query latency by 40%.</li>
+    </ul>
+
+    <h3>Serverless Data Lake for Log Analytics</h3>
+    <ul>
+      <li>Processed log data using AWS Kinesis and Lambda.</li>
+      <li>Stored analytics data in Amazon Redshift.</li>
+      <li>Reduced data load time by 50%.</li>
+    </ul>
+
+    <h3>British Airways Review Analysis</h3>
+    <ul>
+      <li>Analyzed 5,000+ reviews using web scraping.</li>
+      <li>Built Gradient Boosting model with 85% accuracy.</li>
+    </ul>
+
+    <h3>Customer Churn Prediction</h3>
+    <ul>
+      <li>Built Random Forest model achieving 85% accuracy.</li>
+      <li>Used visualization techniques for insights.</li>
+    </ul>
+
+    <h2>Certifications</h2>
+    <ul>
+      <li>Google Analytics Certification</li>
+      <li>Data Analytics on AWS</li>
+      <li>Generative AI for Data Scientists</li>
+      <li>Data Science Job Simulation</li>
+      <li>Google GA4 & Copilot Certifications</li>
+    </ul>
+
+    <footer>
+      © 2025 Rithesh Donthoju | Portfolio
+    </footer>
+
   </div>
-
-  <footer>
-    © <span id="y"></span> Rithesh Donthoju • Built with GitHub Pages
-  </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
