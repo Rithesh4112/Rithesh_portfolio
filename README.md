@@ -31,8 +31,8 @@ Welcome! I’m a Master’s student in Data Science at UMBC, with hands-on exper
 
 ## Contact
 
-- 📧 Email: your-email@gmail.com  
-- 🔗 LinkedIn: https://linkedin.com/in/your-link  
+- 📧 Email: ritheshdonthoju04@gmail.com
+- 🔗 LinkedIn:(https://www.linkedin.com/in/rithesh-donthoju/)
 - 💻 GitHub: https://github.com/Rithesh4112
 
 
