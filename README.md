@@ -29,7 +29,12 @@ Welcome! I’m a Master’s student in Data Science at UMBC, with hands-on exper
 - BCG GenAI Experience Program
 - Data Science Job Simulation
 
----
+## Contact
+
+- 📧 Email: your-email@gmail.com  
+- 🔗 LinkedIn: https://linkedin.com/in/your-link  
+- 💻 GitHub: https://github.com/Rithesh4112
+
 
  Feel free to explore the individual project folders for code, results, and documentation.
 
