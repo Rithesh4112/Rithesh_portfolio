@@ -5,7 +5,7 @@ This repository showcases my **projects, academic background, professional exper
 
 ---
 
-## 🎓 Education
+##  Education
 
 **Master’s Degree in Data Science**  
 **University of Maryland, Baltimore County (UMBC)**  
@@ -17,7 +17,7 @@ This repository showcases my **projects, academic background, professional exper
 
 ---
 
-## 🛠️ Skills & Tools
+##  Skills & Tools
 
 **Programming Languages**  
 Python, Scala, Java, C++, C, JavaScript, PHP, Shell Scripting, Salesforce
@@ -39,7 +39,7 @@ Git, Jupyter Notebook, RapidResponse, MS Office Suite
 
 ---
 
-## 💼 Professional Experience
+##  Professional Experience
 
 ### **Data Engineer – Maryland Insurance Administration (MIA) | Co-op**  
 *Sep 2025 – Present*
@@ -70,7 +70,7 @@ Git, Jupyter Notebook, RapidResponse, MS Office Suite
 
 ---
 
-### **Data Analyst Intern – Qualitest India Pvt. Ltd.**  
+### **Data Analyst Intern.**  
 *Mar 2023 – Jul 2024*
 
 - Designed and deployed **automated ETL pipelines** using **Apache Airflow** and **AWS Lambda** into **Snowflake** data warehouses.  
@@ -80,7 +80,7 @@ Git, Jupyter Notebook, RapidResponse, MS Office Suite
 
 ---
 
-## 🚀 Projects
+##  Projects
 
 ### **AWS Data Pipeline for Real-Time Sales Analytics**  
 *Feb 2025 – Apr 2025*
@@ -121,7 +121,7 @@ Git, Jupyter Notebook, RapidResponse, MS Office Suite
 
 ---
 
-## 📜 Certifications
+## Certifications
 
 - **JPMorgan Chase Software Engineering Certificate**  
 - **UMBC Professional Edge**  
@@ -135,8 +135,8 @@ Git, Jupyter Notebook, RapidResponse, MS Office Suite
 
 ---
 
-## 📫 Contact
+##  Contact
 
-📧 **Email:** ritheshdonthoju04@gmail.com  
-🔗 **LinkedIn:** https://www.linkedin.com/in/rithesh-donthoju/  
-💻 **GitHub:** https://github.com/Rithesh4112
+ **Email:** ritheshdonthoju04@gmail.com  
+ **LinkedIn:** https://www.linkedin.com/in/rithesh-donthoju/  
+ **GitHub:** https://github.com/Rithesh4112
