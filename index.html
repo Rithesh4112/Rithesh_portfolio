@@ -253,6 +253,13 @@
       gap:10px;
     }
 
+    /* Make certification cards clickable & nice */
+    a.card.box { text-decoration: none; }
+    a.card.box:hover {
+      border-color: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.07);
+    }
+
     /* Responsive */
     @media (max-width: 900px){
       .hero{grid-template-columns: 1fr; }
@@ -286,7 +293,7 @@
     <!-- Hero -->
     <div class="hero">
       <div class="card hero-left">
-        <div class="kicker">DATA SCIENCE • DATA ENGINEERING • CLOUD ANALYTICS</div>
+        <div class="kicker">WELCOME TO MY PORTFOLIO • DATA SCIENCE • DATA ENGINEERING • CLOUD ANALYTICS</div>
         <h1>Building scalable data systems and ML-driven insights.</h1>
         <p class="subtitle">
           I’m <span class="highlight">Rithesh Donthoju</span>, a <span class="highlight">Master’s student in Data Science at UMBC</span> with experience in
@@ -307,8 +314,6 @@
           <a class="btn ghost" href="https://github.com/Rithesh4112" target="_blank" rel="noreferrer">
             <span class="icon">💻</span> GitHub
           </a>
-          <!-- Optional: add your resume PDF in the repo and link it here -->
-          <!-- <a class="btn" href="./Rithesh_Donthoju_Resume.pdf" target="_blank" rel="noreferrer"><span class="icon">📄</span> Resume</a> -->
         </div>
       </div>
 
@@ -349,86 +354,88 @@
       <div class="section-head">
         <div>
           <h2>Featured Projects</h2>
-          <p>Selected work — pipelines, analytics, and backend systems.</p>
+          <p>Selected work — ML, analytics, and real-world data insights.</p>
         </div>
       </div>
 
       <div class="grid-2">
-        <div class="card box">
-          <div class="box-title">
-            <div>
-              <h3>AWS Data Pipeline for Real-Time Sales Analytics</h3>
-              <div class="meta">Feb 2025 – Apr 2025</div>
-            </div>
-            <!-- Replace # with your project folder or repo link -->
-            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
-          </div>
-          <ul class="clean">
-            <li>Built automated ETL using <strong>AWS Lambda</strong> and <strong>AWS Glue</strong> into an <strong>S3 data lake</strong>.</li>
-            <li>Created <strong>Athena</strong> tables and <strong>QuickSight</strong> dashboards for revenue, orders, churn KPIs.</li>
-            <li>Added validation + error logging, reducing manual correction by <strong>35%</strong>.</li>
-            <li>Optimized Parquet + partitioning, reducing query latency by <strong>40%</strong>.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">Glue</span><span class="tag">S3</span><span class="tag">Athena</span><span class="tag">QuickSight</span>
-          </div>
-        </div>
 
-        <div class="card box">
+        <!-- ER Wait Time Prediction -->
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Predict-ing-Emergency-Room-ER-Wait-Time" target="_blank" rel="noreferrer">
           <div class="box-title">
             <div>
-              <h3>Serverless Data Lake for Log Processing & Analytics</h3>
-              <div class="meta">Dec 2024 – Jan 2025</div>
+              <h3>Predicting Emergency Room (ER) Wait Time</h3>
+              <div class="meta">Linear Regression • Healthcare Analytics</div>
             </div>
-            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
+            <span class="btn ghost" title="Open project">↗</span>
           </div>
           <ul class="clean">
-            <li>Ingested logs using <strong>AWS Kinesis</strong> + <strong>Lambda</strong> in near real-time.</li>
-            <li>Stored and analyzed logs in <strong>Amazon Redshift</strong> for historical trends.</li>
-            <li>Implemented <strong>CloudWatch</strong> monitoring and alerting for pipeline health.</li>
-            <li>Optimized schemas + COPY ingestion, reducing load time by <strong>50%</strong>.</li>
+            <li>Built a baseline <strong>Linear Regression</strong> model to predict ER wait time using selected features.</li>
+            <li>Encoded categorical variables like <strong>Time of Day</strong> and <strong>Day of Week</strong>.</li>
+            <li>Evaluated with <strong>MAE, RMSE, and R²</strong> and documented limitations and improvement plan.</li>
           </ul>
           <div class="tags">
-            <span class="tag">Kinesis</span><span class="tag">Lambda</span><span class="tag">Redshift</span><span class="tag">CloudWatch</span>
+            <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Regression</span><span class="tag">Healthcare</span>
           </div>
-        </div>
+        </a>
 
-        <div class="card box">
+        <!-- Crime & Socioeconomic Factors -->
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Crime-and-Socioeconomic-Factors-in-Washington-D.C.-2024-" target="_blank" rel="noreferrer">
           <div class="box-title">
             <div>
-              <h3>Kafka-Based Transaction Processing Microservice (Spring Boot)</h3>
-              <div class="meta">Oct 2024 – Nov 2024</div>
+              <h3>Crime & Socioeconomic Factors (Washington, D.C. 2024)</h3>
+              <div class="meta">Imbalanced Classification • Model Comparison</div>
             </div>
-            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
+            <span class="btn ghost" title="Open project">↗</span>
           </div>
           <ul class="clean">
-            <li>Built a Spring Boot service consuming high-volume events using <strong>Apache Kafka</strong>.</li>
-            <li>Implemented validation + persistence via <strong>Spring Data JPA</strong> and <strong>H2</strong>.</li>
-            <li>Integrated external Incentive REST API using <strong>RestTemplate</strong>.</li>
-            <li>Verified behavior with <strong>Maven tests</strong> and debugger-driven analysis.</li>
+            <li>Compared <strong>PyTorch FNN</strong>, <strong>XGBoost</strong>, and baselines for violent crime detection.</li>
+            <li>Improved recall with <strong>class weights</strong> and <strong>SMOTE</strong>, analyzed precision trade-offs.</li>
+            <li>Documented insights and key takeaways for model selection decisions.</li>
           </ul>
           <div class="tags">
-            <span class="tag">Kafka</span><span class="tag">Spring Boot</span><span class="tag">JPA</span><span class="tag">REST</span>
+            <span class="tag">PyTorch</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span><span class="tag">Classification</span>
           </div>
-        </div>
+        </a>
 
-        <div class="card box">
+        <!-- Retail Sales SQL -->
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/SQL_retal_sales_P1" target="_blank" rel="noreferrer">
           <div class="box-title">
             <div>
-              <h3>Customer Churn Prediction</h3>
-              <div class="meta">Aug 2024 – Oct 2024</div>
+              <h3>Retail Sales Analysis (SQL)</h3>
+              <div class="meta">SQL • Business Insights</div>
             </div>
-            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
+            <span class="btn ghost" title="Open project">↗</span>
           </div>
           <ul class="clean">
-            <li>Identified key behavioral indicators and performed feature engineering.</li>
-            <li>Built and optimized a <strong>Random Forest</strong> model with <strong>85% accuracy</strong>.</li>
-            <li>Used visualizations to communicate insights clearly to stakeholders.</li>
+            <li>Analyzed sales, customers, and product trends using structured <strong>SQL queries</strong>.</li>
+            <li>Identified high-value transactions, top customers, popular categories, and peak seasons.</li>
+            <li>Summarized insights for actionable business decision-making.</li>
           </ul>
           <div class="tags">
-            <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Modeling</span><span class="tag">EDA</span>
+            <span class="tag">SQL</span><span class="tag">Analytics</span><span class="tag">Trends</span><span class="tag">Reporting</span>
           </div>
-        </div>
+        </a>
+
+        <!-- Diwali Sales Analysis -->
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Diwali-sales-analysis" target="_blank" rel="noreferrer">
+          <div class="box-title">
+            <div>
+              <h3>Diwali Sales Analysis</h3>
+              <div class="meta">EDA • Segmentation • Visualization</div>
+            </div>
+            <span class="btn ghost" title="Open project">↗</span>
+          </div>
+          <ul class="clean">
+            <li>Performed seasonal sales analysis and customer segmentation to understand buying behavior.</li>
+            <li>Created insights using trend charts and category performance visualizations.</li>
+            <li>Delivered business-ready summary and key observations.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">EDA</span><span class="tag">Visualization</span><span class="tag">Segmentation</span>
+          </div>
+        </a>
+
       </div>
     </section>
 
@@ -582,20 +589,47 @@
       <div class="section-head">
         <div>
           <h2>Certifications</h2>
-          <p>Credentials supporting engineering and analytics skills.</p>
+          <p>Click any card to view credentials (LinkedIn certifications page).</p>
         </div>
       </div>
 
       <div class="grid-3">
-        <div class="card box"><h3>JPMorgan Chase Software Engineering Certificate</h3></div>
-        <div class="card box"><h3>UMBC Professional Edge</h3></div>
-        <div class="card box"><h3>Google Analytics Certification</h3></div>
-        <div class="card box"><h3>Data Analytics on AWS</h3></div>
-        <div class="card box"><h3>Google – Manage GA4 Data and Read Reports</h3></div>
-        <div class="card box"><h3>Data Science Job Simulation</h3></div>
-        <div class="card box"><h3>Generative AI for Data Scientists (Specialization)</h3></div>
-        <div class="card box"><h3>Data Analysis, Visualization, and Communication with Copilot</h3></div>
-        <div class="card box"><h3>Data Preparation and Evaluation with Copilot</h3></div>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>JPMorgan Chase Software Engineering Certificate</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>UMBC Professional Edge</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Google Analytics Certification</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Analytics on AWS</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Google – Manage GA4 Data and Read Reports</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Science Job Simulation</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Generative AI for Data Scientists (Specialization)</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Analysis, Visualization, and Communication with Copilot</h3>
+          <p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Preparation and Evaluation with Copilot</h3>
+          <p>View Credential ↗</p>
+        </a>
       </div>
     </section>
 
