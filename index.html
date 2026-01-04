@@ -1,218 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rithesh Donthoju | Data Science & Data Engineering Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rithesh Donthoju | Data Science & Data Engineering</title>
+  <meta name="description" content="Rithesh Donthoju — Data Science & Data Engineering portfolio. Projects, experience, skills, and certifications." />
 
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f6f8;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.09);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.58);
+      --border: rgba(255,255,255,0.12);
+      --accent: #60a5fa;
+      --accent2:#34d399;
+      --danger:#fb7185;
+      --shadow: 0 18px 50px rgba(0,0,0,0.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 1080px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px;
-      background: #ffffff;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(96,165,250,0.22), transparent 55%),
+        radial-gradient(850px 520px at 85% 25%, rgba(52,211,153,0.16), transparent 55%),
+        radial-gradient(700px 450px at 55% 90%, rgba(251,113,133,0.12), transparent 55%),
+        linear-gradient(180deg, #070b14, var(--bg));
+      line-height:1.55;
     }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 5px;
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 18px 60px;}
+
+    /* Top Nav */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,18,32,0.65);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(96,165,250,0.15);
+    }
+    .nav-links{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px;
+      color: var(--muted);
+    }
+    .nav-links a{
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid transparent;
+    }
+    .nav-links a:hover{
+      color: var(--text);
+      border-color: var(--border);
+      background: rgba(255,255,255,0.05);
     }
 
-    h2 {
-      color: #1a73e8;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 5px;
-      margin-top: 40px;
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.4fr 0.9fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:18px;
+    }
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:26px 24px;}
+    .kicker{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted2);
+      letter-spacing:0.4px;
+      margin-bottom:10px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 3.6vw, 42px);
+      letter-spacing:-0.6px;
+      line-height:1.15;
+    }
+    .subtitle{
+      margin:0 0 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+    .highlight{
+      color: var(--text);
+      font-weight:650;
+    }
+    .cta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-weight:650;
+      font-size:14px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.2);}
+    .btn.primary{
+      border-color: rgba(96,165,250,0.35);
+      background: linear-gradient(135deg, rgba(96,165,250,0.25), rgba(52,211,153,0.18));
+    }
+    .btn.ghost{background: transparent;}
+    .icon{
+      width:18px; height:18px; display:inline-block;
     }
 
-    h3 {
-      margin-bottom: 5px;
-      margin-top: 20px;
+    .hero-right{padding:22px 20px; display:flex; flex-direction:column; gap:12px;}
+    .mini{
+      background: rgba(255,255,255,0.05);
+      border:1px solid var(--border);
+      border-radius: var(--radius2);
+      padding:14px 14px;
+    }
+    .mini h3{
+      margin:0 0 6px;
+      font-size:13px;
+      color: var(--muted);
+      font-weight:700;
+      letter-spacing:0.2px;
+      text-transform: uppercase;
+    }
+    .mini p{margin:0; color: var(--text); font-size:14px;}
+    .mini a{color: var(--accent); font-weight:650;}
+    .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
+    .pill{
+      font-size:12px;
+      color: rgba(255,255,255,0.84);
+      padding:7px 10px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.04);
     }
 
-    .contact a {
-      color: #1a73e8;
-      text-decoration: none;
-      margin-right: 15px;
-      font-weight: bold;
+    /* Sections */
+    section{margin-top:18px;}
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      padding:0 2px;
+      margin:26px 0 12px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-0.2px;
+    }
+    .section-head p{
+      margin:0;
+      color: var(--muted2);
+      font-size:13px;
     }
 
-    ul {
-      padding-left: 20px;
+    /* Grid layouts */
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    .grid-1{display:grid; grid-template-columns: 1fr; gap:14px;}
+
+    /* Content Cards */
+    .box{padding:18px 18px;}
+    .box-title{display:flex; justify-content:space-between; gap:12px; align-items:flex-start;}
+    .box-title h3{margin:0; font-size:15px;}
+    .meta{color: var(--muted2); font-size:12.5px;}
+    .box p{margin:10px 0 0; color: var(--muted); font-size:14px;}
+    ul.clean{margin:10px 0 0; padding-left:18px; color: var(--muted); font-size:14px;}
+    ul.clean li{margin:7px 0;}
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+    .tag{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding:6px 9px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.80);
     }
 
-    li {
-      margin-bottom: 8px;
+    /* Experience Timeline */
+    .timeline{display:flex; flex-direction:column; gap:12px;}
+    .role{
+      padding:18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+    }
+    .role .top{display:flex; justify-content:space-between; gap:12px; align-items:flex-start;}
+    .role h3{margin:0; font-size:15px;}
+    .role .org{color: var(--muted); font-size:13px; margin-top:4px;}
+    .role .date{color: var(--muted2); font-size:12.5px; white-space:nowrap;}
+    .role ul{margin:12px 0 0; padding-left:18px; color: var(--muted); font-size:14px;}
+    .role li{margin:7px 0;}
+
+    /* Footer */
+    footer{
+      margin-top:34px;
+      padding-top:18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted2);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
     }
 
-    .date {
-      float: right;
-      font-style: italic;
-      color: #666;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #777;
-      font-size: 14px;
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr; }
+      .grid-3{grid-template-columns: 1fr;}
+      .grid-2{grid-template-columns: 1fr;}
+      .nav-links{display:none;}
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <!-- Top Nav -->
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Rithesh Donthoju</span>
+      </div>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
 
-    <h1>Rithesh Donthoju</h1>
+  <div class="wrap">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="card hero-left">
+        <div class="kicker">DATA SCIENCE • DATA ENGINEERING • CLOUD ANALYTICS</div>
+        <h1>Building scalable data systems and ML-driven insights.</h1>
+        <p class="subtitle">
+          I’m <span class="highlight">Rithesh Donthoju</span>, a <span class="highlight">Master’s student in Data Science at UMBC</span> with experience in
+          <span class="highlight">AWS-based pipelines</span>, <span class="highlight">analytics dashboards</span>, and <span class="highlight">machine learning</span>.
+          I enjoy turning messy data into clean, reliable products that stakeholders can trust.
+        </p>
 
-    <p>
-      Master’s student in <strong>Data Science at the University of Maryland, Baltimore County (UMBC)</strong>
-      with hands-on experience in <strong>cloud data engineering, machine learning, big data processing,
-      and analytics dashboards</strong>.
-    </p>
+        <div class="cta">
+          <a class="btn primary" href="#projects" aria-label="View Projects">
+            <span class="icon">🚀</span> View Projects
+          </a>
+          <a class="btn" href="mailto:ritheshdonthoju04@gmail.com" aria-label="Email">
+            <span class="icon">📧</span> Email Me
+          </a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/rithesh-donthoju/" target="_blank" rel="noreferrer">
+            <span class="icon">🔗</span> LinkedIn
+          </a>
+          <a class="btn ghost" href="https://github.com/Rithesh4112" target="_blank" rel="noreferrer">
+            <span class="icon">💻</span> GitHub
+          </a>
+          <!-- Optional: add your resume PDF in the repo and link it here -->
+          <!-- <a class="btn" href="./Rithesh_Donthoju_Resume.pdf" target="_blank" rel="noreferrer"><span class="icon">📄</span> Resume</a> -->
+        </div>
+      </div>
 
-    <div class="contact">
-      📧 <a href="mailto:ritheshdonthoju04@gmail.com">ritheshdonthoju04@gmail.com</a>
-      📞 +1 (667) 345-4260 <br><br>
-      🔗 <a href="https://www.linkedin.com/in/rithesh-donthoju/" target="_blank">LinkedIn</a>
-      💻 <a href="https://github.com/Rithesh4112" target="_blank">GitHub</a>
+      <div class="card hero-right">
+        <div class="mini">
+          <h3>Currently</h3>
+          <p><strong>Data Engineer (Co-op)</strong> at Maryland Insurance Administration (MIA)</p>
+          <div class="pill-row">
+            <span class="pill">AWS</span>
+            <span class="pill">Salesforce Data</span>
+            <span class="pill">Tableau/Power BI</span>
+          </div>
+        </div>
+
+        <div class="mini">
+          <h3>Focus Areas</h3>
+          <p>Cloud data pipelines, serverless architecture, BI dashboards, and applied ML.</p>
+          <div class="pill-row">
+            <span class="pill">ETL</span>
+            <span class="pill">Athena</span>
+            <span class="pill">Redshift</span>
+            <span class="pill">Kafka</span>
+          </div>
+        </div>
+
+        <div class="mini" id="contact">
+          <h3>Contact</h3>
+          <p>
+            <strong>Email:</strong> <a href="mailto:ritheshdonthoju04@gmail.com">ritheshdonthoju04@gmail.com</a><br />
+            <strong>Phone:</strong> +1 (667) 345-4260
+          </p>
+        </div>
+      </div>
     </div>
 
-    <!-- EDUCATION -->
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>Master’s Degree in Data Science</strong>, University of Maryland, Baltimore County
-        <span class="date">Aug 2024 – May 2026</span>
-      </li>
-      <li>
-        <strong>Bachelor’s Degree in Electrical Communication Engineering</strong>,
-        Guru Nanak Institute of Technology
-        <span class="date">Jul 2020 – Aug 2024</span>
-      </li>
-    </ul>
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-head">
+        <div>
+          <h2>Featured Projects</h2>
+          <p>Selected work — pipelines, analytics, and backend systems.</p>
+        </div>
+      </div>
 
-    <!-- SKILLS -->
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li><strong>Programming Languages:</strong> Python, Scala, Java, C++, C, JavaScript, PHP, Shell Scripting, Salesforce</li>
-      <li><strong>Data Warehousing & Databases:</strong> Schema Design, SQL (MySQL, Oracle, PostgreSQL), Amazon Redshift, Snowflake, MongoDB</li>
-      <li><strong>Big Data & Processing:</strong> Apache Hadoop, Apache Spark</li>
-      <li><strong>Data Visualization:</strong> Amazon QuickSight, Tableau, Power BI, Looker, Dash, Matplotlib, Seaborn</li>
-      <li><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, Google Cloud Platform</li>
-      <li><strong>Tools:</strong> Git, Jupyter Notebook, RapidResponse, MS Office Suite</li>
-    </ul>
+      <div class="grid-2">
+        <div class="card box">
+          <div class="box-title">
+            <div>
+              <h3>AWS Data Pipeline for Real-Time Sales Analytics</h3>
+              <div class="meta">Feb 2025 – Apr 2025</div>
+            </div>
+            <!-- Replace # with your project folder or repo link -->
+            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
+          </div>
+          <ul class="clean">
+            <li>Built automated ETL using <strong>AWS Lambda</strong> and <strong>AWS Glue</strong> into an <strong>S3 data lake</strong>.</li>
+            <li>Created <strong>Athena</strong> tables and <strong>QuickSight</strong> dashboards for revenue, orders, churn KPIs.</li>
+            <li>Added validation + error logging, reducing manual correction by <strong>35%</strong>.</li>
+            <li>Optimized Parquet + partitioning, reducing query latency by <strong>40%</strong>.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">Glue</span><span class="tag">S3</span><span class="tag">Athena</span><span class="tag">QuickSight</span>
+          </div>
+        </div>
 
-    <!-- EXPERIENCE -->
-    <h2>Professional Experience</h2>
+        <div class="card box">
+          <div class="box-title">
+            <div>
+              <h3>Serverless Data Lake for Log Processing & Analytics</h3>
+              <div class="meta">Dec 2024 – Jan 2025</div>
+            </div>
+            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
+          </div>
+          <ul class="clean">
+            <li>Ingested logs using <strong>AWS Kinesis</strong> + <strong>Lambda</strong> in near real-time.</li>
+            <li>Stored and analyzed logs in <strong>Amazon Redshift</strong> for historical trends.</li>
+            <li>Implemented <strong>CloudWatch</strong> monitoring and alerting for pipeline health.</li>
+            <li>Optimized schemas + COPY ingestion, reducing load time by <strong>50%</strong>.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Kinesis</span><span class="tag">Lambda</span><span class="tag">Redshift</span><span class="tag">CloudWatch</span>
+          </div>
+        </div>
 
-    <h3>Data Engineer – Maryland Insurance Administration (MIA) | Co-op
-      <span class="date">Sep 2025 – Present</span>
-    </h3>
-    <ul>
-      <li>Developed and validated AWS-based cloud workflows supporting regulatory, fiscal, and licensing systems.</li>
-      <li>Validated AWS-hosted Salesforce integrations, ensuring accurate data ingestion, transformation, synchronization, and API-driven communication.</li>
-      <li>Participated in Agile sprint cycles, performing functional testing, regression validation, and deployment verification.</li>
-      <li>Supported cloud operations by monitoring production systems, troubleshooting data inconsistencies, and automating device setup using scripting tools.</li>
-    </ul>
+        <div class="card box">
+          <div class="box-title">
+            <div>
+              <h3>Kafka-Based Transaction Processing Microservice (Spring Boot)</h3>
+              <div class="meta">Oct 2024 – Nov 2024</div>
+            </div>
+            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
+          </div>
+          <ul class="clean">
+            <li>Built a Spring Boot service consuming high-volume events using <strong>Apache Kafka</strong>.</li>
+            <li>Implemented validation + persistence via <strong>Spring Data JPA</strong> and <strong>H2</strong>.</li>
+            <li>Integrated external Incentive REST API using <strong>RestTemplate</strong>.</li>
+            <li>Verified behavior with <strong>Maven tests</strong> and debugger-driven analysis.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Kafka</span><span class="tag">Spring Boot</span><span class="tag">JPA</span><span class="tag">REST</span>
+          </div>
+        </div>
 
-    <h3>IT Intern – Maryland Insurance Administration (MIA)
-      <span class="date">Jun 2025 – Aug 2025</span>
-    </h3>
-    <ul>
-      <li>Automated Salesforce-based data pipelines using Python and SQL for data cleaning, transformation, and validation.</li>
-      <li>Assisted with system configuration, environment setup, and server/network access procedures.</li>
-      <li>Connected Salesforce datasets to Tableau and Power BI to create interactive KPI cards and trend dashboards.</li>
-      <li>Used Salesforce Data Loader to extract and cleanse policy and agent data for analytics.</li>
-    </ul>
+        <div class="card box">
+          <div class="box-title">
+            <div>
+              <h3>Customer Churn Prediction</h3>
+              <div class="meta">Aug 2024 – Oct 2024</div>
+            </div>
+            <a class="btn ghost" href="#" title="Add GitHub link">↗</a>
+          </div>
+          <ul class="clean">
+            <li>Identified key behavioral indicators and performed feature engineering.</li>
+            <li>Built and optimized a <strong>Random Forest</strong> model with <strong>85% accuracy</strong>.</li>
+            <li>Used visualizations to communicate insights clearly to stakeholders.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Modeling</span><span class="tag">EDA</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>Graduate Research Assistant (Volunteer) – UMBC
-      <span class="date">Dec 2024 – Jun 2025</span>
-    </h3>
-    <ul>
-      <li>Designed data processing workflows using Python and SQL for experimental research analytics.</li>
-      <li>Created dashboards and analytical summaries for international collaborators.</li>
-      <li>Developed internal documentation and training materials to streamline onboarding.</li>
-    </ul>
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-head">
+        <div>
+          <h2>Professional Experience</h2>
+          <p>Roles focused on cloud workflows, integrations, analytics, and data reliability.</p>
+        </div>
+      </div>
 
-    <h3>Data Analyst Intern – Qualitest India Pvt. Ltd.
-      <span class="date">Mar 2023 – Jul 2024</span>
-    </h3>
-    <ul>
-      <li>Built automated ETL pipelines using Apache Airflow and AWS Lambda into Snowflake data warehouses.</li>
-      <li>Developed real-time dashboards in Power BI and Tableau using Snowflake and Amazon S3.</li>
-      <li>Optimized SQL queries and data models, reducing manual reporting by 30%.</li>
-      <li>Collaborated on dimensional modeling and curated datasets for KPI forecasting.</li>
-    </ul>
+      <div class="timeline">
+        <div class="role">
+          <div class="top">
+            <div>
+              <h3>Data Engineer (Co-op)</h3>
+              <div class="org">Maryland Insurance Administration (MIA)</div>
+            </div>
+            <div class="date">Sep 2025 – Present</div>
+          </div>
+          <ul>
+            <li>Developed and validated <strong>AWS-based cloud workflows</strong> supporting regulatory, fiscal, and licensing systems.</li>
+            <li>Validated <strong>AWS-hosted Salesforce integrations</strong> for accurate ingestion, transformation, synchronization, and API communication.</li>
+            <li>Performed functional testing, regression validation, and deployment verification in <strong>Agile sprint cycles</strong>.</li>
+            <li>Monitored production systems, resolved data inconsistencies, and automated device setup using enterprise tools and scripting.</li>
+          </ul>
+        </div>
 
-    <!-- PROJECTS -->
-    <h2>Projects</h2>
+        <div class="role">
+          <div class="top">
+            <div>
+              <h3>IT Intern</h3>
+              <div class="org">Maryland Insurance Administration (MIA)</div>
+            </div>
+            <div class="date">Jun 2025 – Aug 2025</div>
+          </div>
+          <ul>
+            <li>Automated Salesforce data workflows using <strong>Python + SQL</strong> for cleaning, transformation, and validation.</li>
+            <li>Assisted with environment setup and operational procedures for scalable, maintainable workflows.</li>
+            <li>Connected Salesforce data to <strong>Tableau</strong> and <strong>Power BI</strong> to build KPI cards and trend dashboards.</li>
+            <li>Used <strong>Salesforce Data Loader</strong> for extraction and ensured accuracy/consistency for reporting.</li>
+          </ul>
+        </div>
 
-    <h3>AWS Data Pipeline for Real-Time Sales Analytics
-      <span class="date">Feb 2025 – Apr 2025</span>
-    </h3>
-    <ul>
-      <li>Built automated ETL pipelines using AWS Lambda and AWS Glue to process streaming sales data.</li>
-      <li>Created Athena tables and QuickSight dashboards for real-time KPI monitoring.</li>
-      <li>Implemented validation and error logging, reducing manual data correction by 35%.</li>
-      <li>Optimized Parquet-based S3 layouts, reducing query latency by 40%.</li>
-    </ul>
+        <div class="role">
+          <div class="top">
+            <div>
+              <h3>Graduate Research Assistant (Volunteer)</h3>
+              <div class="org">University of Maryland, Baltimore County (UMBC)</div>
+            </div>
+            <div class="date">Dec 2024 – Jun 2025</div>
+          </div>
+          <ul>
+            <li>Designed data processing workflows using <strong>Python and SQL</strong> for experimental research analytics.</li>
+            <li>Built dashboards and summaries to communicate results to international collaborators.</li>
+            <li>Created documentation and training materials to streamline onboarding and cross-team collaboration.</li>
+          </ul>
+        </div>
 
-    <h3>Serverless Data Lake for Log Processing & Analytics
-      <span class="date">Dec 2024 – Jan 2025</span>
-    </h3>
-    <ul>
-      <li>Built serverless pipelines using AWS Kinesis and Lambda for log ingestion.</li>
-      <li>Stored and analyzed logs in Amazon Redshift.</li>
-      <li>Implemented CloudWatch monitoring and alerts.</li>
-      <li>Optimized Redshift ingestion, reducing load time by 50%.</li>
-    </ul>
+        <div class="role">
+          <div class="top">
+            <div>
+              <h3>Data Analyst Intern</h3>
+              <div class="org">Qualitest India Pvt. Ltd.</div>
+            </div>
+            <div class="date">Mar 2023 – Jul 2024</div>
+          </div>
+          <ul>
+            <li>Built ETL pipelines using <strong>Apache Airflow</strong> + <strong>AWS Lambda</strong> into <strong>Snowflake</strong>.</li>
+            <li>Developed real-time dashboards in <strong>Power BI</strong> and <strong>Tableau</strong> with data from Snowflake and S3.</li>
+            <li>Optimized SQL queries and models, reducing manual reporting effort by <strong>30%</strong>.</li>
+            <li>Created curated datasets and dimensional models for KPI analysis and forecasting.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <h3>Kafka-Based Transaction Processing Microservice (Spring Boot)
-      <span class="date">Oct 2024 – Nov 2024</span>
-    </h3>
-    <ul>
-      <li>Developed a Spring Boot microservice using Apache Kafka.</li>
-      <li>Implemented transaction validation and persistence using Spring Data JPA.</li>
-      <li>Integrated an external Incentive REST API.</li>
-      <li>Exposed RESTful endpoints and validated using Maven test suites.</li>
-    </ul>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-head">
+        <div>
+          <h2>Skills</h2>
+          <p>Tools and technologies I use across engineering, analytics, and ML.</p>
+        </div>
+      </div>
 
-    <h3>Customer Churn Prediction
-      <span class="date">Aug 2024 – Oct 2024</span>
-    </h3>
-    <ul>
-      <li>Conducted customer churn analysis using visualization and feature engineering.</li>
-      <li>Built and optimized a Random Forest model with 85% accuracy.</li>
-    </ul>
+      <div class="grid-3">
+        <div class="card box">
+          <h3>Programming</h3>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">Python</span><span class="tag">Scala</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span>
+            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">Shell</span><span class="tag">Salesforce</span>
+          </div>
+        </div>
 
-    <!-- CERTIFICATIONS -->
-    <h2>Certifications</h2>
-    <ul>
-      <li>JPMorgan Chase Software Engineering Certificate</li>
-      <li>UMBC Professional Edge</li>
-      <li>Google Analytics Certification</li>
-      <li>Data Analytics on AWS</li>
-      <li>Google – Manage GA4 Data and Read Reports</li>
-      <li>Data Science Job Simulation</li>
-      <li>Generative AI for Data Scientists (Specialization)</li>
-      <li>Data Analysis, Visualization, and Communication with Copilot</li>
-      <li>Data Preparation and Evaluation with Copilot</li>
-    </ul>
+        <div class="card box">
+          <h3>Data Platforms</h3>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Oracle</span>
+            <span class="tag">Redshift</span><span class="tag">Snowflake</span><span class="tag">MongoDB</span><span class="tag">Schema Design</span>
+          </div>
+        </div>
+
+        <div class="card box">
+          <h3>Cloud • Big Data • BI</h3>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Spark</span><span class="tag">Hadoop</span>
+            <span class="tag">QuickSight</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Looker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="section-head">
+        <div>
+          <h2>Education</h2>
+          <p>Academic foundation in data science and engineering.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <div class="box-title">
+            <div>
+              <h3>Master’s Degree in Data Science</h3>
+              <div class="meta">University of Maryland, Baltimore County (UMBC)</div>
+            </div>
+            <div class="meta">Aug 2024 – May 2026</div>
+          </div>
+          <p>Focus on machine learning, data engineering, analytics, and applied research.</p>
+        </div>
+
+        <div class="card box">
+          <div class="box-title">
+            <div>
+              <h3>Bachelor’s Degree in Electrical Communication Engineering</h3>
+              <div class="meta">Guru Nanak Institute of Technology</div>
+            </div>
+            <div class="meta">Jul 2020 – Aug 2024</div>
+          </div>
+          <p>Foundation in engineering, signal processing concepts, and applied computing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs">
+      <div class="section-head">
+        <div>
+          <h2>Certifications</h2>
+          <p>Credentials supporting engineering and analytics skills.</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card box"><h3>JPMorgan Chase Software Engineering Certificate</h3></div>
+        <div class="card box"><h3>UMBC Professional Edge</h3></div>
+        <div class="card box"><h3>Google Analytics Certification</h3></div>
+        <div class="card box"><h3>Data Analytics on AWS</h3></div>
+        <div class="card box"><h3>Google – Manage GA4 Data and Read Reports</h3></div>
+        <div class="card box"><h3>Data Science Job Simulation</h3></div>
+        <div class="card box"><h3>Generative AI for Data Scientists (Specialization)</h3></div>
+        <div class="card box"><h3>Data Analysis, Visualization, and Communication with Copilot</h3></div>
+        <div class="card box"><h3>Data Preparation and Evaluation with Copilot</h3></div>
+      </div>
+    </section>
 
     <footer>
-      © 2025 Rithesh Donthoju | Portfolio
+      <div>© <span id="year"></span> Rithesh Donthoju</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn ghost" href="mailto:ritheshdonthoju04@gmail.com">📧 Email</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/rithesh-donthoju/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/Rithesh4112" target="_blank" rel="noreferrer">💻 GitHub</a>
+      </div>
     </footer>
-
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
