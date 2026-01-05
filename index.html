@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,6 @@
       --border: rgba(255,255,255,0.12);
       --accent: #60a5fa;
       --accent2:#34d399;
-      --danger:#fb7185;
       --shadow: 0 18px 50px rgba(0,0,0,0.45);
       --radius: 18px;
       --radius2: 14px;
@@ -204,7 +204,6 @@
     /* Grid layouts */
     .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
     .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
-    .grid-1{display:grid; grid-template-columns: 1fr; gap:14px;}
 
     /* Content Cards */
     .box{padding:18px 18px;}
@@ -253,7 +252,7 @@
       gap:10px;
     }
 
-    /* Make certification cards clickable & nice */
+    /* Make clickable cards */
     a.card.box { text-decoration: none; }
     a.card.box:hover {
       border-color: rgba(255,255,255,0.22);
@@ -279,10 +278,10 @@
         <span>Rithesh Donthoju</span>
       </div>
       <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
         <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#certs">Certifications</a>
         <a href="#contact">Contact</a>
       </div>
@@ -302,18 +301,10 @@
         </p>
 
         <div class="cta">
-          <a class="btn primary" href="#projects" aria-label="View Projects">
-            <span class="icon">🚀</span> View Projects
-          </a>
-          <a class="btn" href="mailto:ritheshdonthoju04@gmail.com" aria-label="Email">
-            <span class="icon">📧</span> Email Me
-          </a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/rithesh-donthoju/" target="_blank" rel="noreferrer">
-            <span class="icon">🔗</span> LinkedIn
-          </a>
-          <a class="btn ghost" href="https://github.com/Rithesh4112" target="_blank" rel="noreferrer">
-            <span class="icon">💻</span> GitHub
-          </a>
+          <a class="btn primary" href="#projects" aria-label="View Projects"><span class="icon">🚀</span> View Projects</a>
+          <a class="btn" href="mailto:ritheshdonthoju04@gmail.com" aria-label="Email"><span class="icon">📧</span> Email Me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/rithesh-donthoju/" target="_blank" rel="noreferrer"><span class="icon">🔗</span> LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/Rithesh4112" target="_blank" rel="noreferrer"><span class="icon">💻</span> GitHub</a>
         </div>
       </div>
 
@@ -349,196 +340,41 @@
       </div>
     </div>
 
-    <!-- Projects -->
-    <section id="projects">
+    <!-- Education (ORDER 1) -->
+    <section id="education">
       <div class="section-head">
         <div>
-          <h2>Projects</h2>
-          <p>Featured projects + additional projects from my GitHub portfolio.</p>
-        </div>
-      </div>
-
-      <!-- Featured Projects (your original featured section) -->
-      <div class="section-head" style="margin-top:10px">
-        <div>
-          <h2 style="font-size:16px;">Featured Projects</h2>
-          <p>Cloud pipelines, backend systems, and applied ML.</p>
+          <h2>Education</h2>
+          <p>Academic foundation in data science and engineering.</p>
         </div>
       </div>
 
       <div class="grid-2">
-
-        <!-- Featured 1 -->
         <div class="card box">
           <div class="box-title">
             <div>
-              <h3>AWS Data Pipeline for Real-Time Sales Analytics</h3>
-              <div class="meta">Feb 2025 – Apr 2025</div>
+              <h3>Master’s Degree in Data Science</h3>
+              <div class="meta">University of Maryland, Baltimore County (UMBC)</div>
             </div>
-            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
+            <div class="meta">Aug 2024 – May 2026</div>
           </div>
-          <ul class="clean">
-            <li>Built automated ETL using <strong>AWS Lambda</strong> and <strong>AWS Glue</strong> into an <strong>S3 data lake</strong>.</li>
-            <li>Created <strong>Athena</strong> tables and <strong>QuickSight</strong> dashboards for revenue, orders, churn KPIs.</li>
-            <li>Added validation + error logging, reducing manual correction by <strong>35%</strong>.</li>
-            <li>Optimized Parquet + partitioning, reducing query latency by <strong>40%</strong>.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">Glue</span><span class="tag">S3</span><span class="tag">Athena</span><span class="tag">QuickSight</span>
-          </div>
+          <p>Focus on machine learning, data engineering, analytics, and applied research.</p>
         </div>
 
-        <!-- Featured 2 -->
         <div class="card box">
           <div class="box-title">
             <div>
-              <h3>Serverless Data Lake for Log Processing & Analytics</h3>
-              <div class="meta">Dec 2024 – Jan 2025</div>
+              <h3>Bachelor’s Degree in Electrical Communication Engineering</h3>
+              <div class="meta">Guru Nanak Institute of Technology</div>
             </div>
-            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
+            <div class="meta">Jul 2020 – Aug 2024</div>
           </div>
-          <ul class="clean">
-            <li>Ingested logs using <strong>AWS Kinesis</strong> + <strong>Lambda</strong> in near real-time.</li>
-            <li>Stored and analyzed logs in <strong>Amazon Redshift</strong> for historical trends.</li>
-            <li>Implemented <strong>CloudWatch</strong> monitoring and alerting for pipeline health.</li>
-            <li>Optimized schemas + COPY ingestion, reducing load time by <strong>50%</strong>.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Kinesis</span><span class="tag">Lambda</span><span class="tag">Redshift</span><span class="tag">CloudWatch</span>
-          </div>
+          <p>Foundation in engineering, signal processing concepts, and applied computing.</p>
         </div>
-
-        <!-- Featured 3 -->
-        <div class="card box">
-          <div class="box-title">
-            <div>
-              <h3>Kafka-Based Transaction Processing Microservice (Spring Boot)</h3>
-              <div class="meta">Oct 2024 – Nov 2024</div>
-            </div>
-            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
-          </div>
-          <ul class="clean">
-            <li>Built a Spring Boot service consuming high-volume events using <strong>Apache Kafka</strong>.</li>
-            <li>Implemented validation + persistence via <strong>Spring Data JPA</strong> and <strong>H2</strong>.</li>
-            <li>Integrated external Incentive REST API using <strong>RestTemplate</strong>.</li>
-            <li>Verified behavior with <strong>Maven tests</strong> and debugger-driven analysis.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Kafka</span><span class="tag">Spring Boot</span><span class="tag">JPA</span><span class="tag">REST</span>
-          </div>
-        </div>
-
-        <!-- Featured 4 -->
-        <div class="card box">
-          <div class="box-title">
-            <div>
-              <h3>Customer Churn Prediction</h3>
-              <div class="meta">Aug 2024 – Oct 2024</div>
-            </div>
-            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
-          </div>
-          <ul class="clean">
-            <li>Identified key behavioral indicators and performed feature engineering.</li>
-            <li>Built and optimized a <strong>Random Forest</strong> model with <strong>85% accuracy</strong>.</li>
-            <li>Used visualizations to communicate insights clearly to stakeholders.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Modeling</span><span class="tag">EDA</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Additional Projects (your provided GitHub folders) -->
-      <div class="section-head" style="margin-top:18px">
-        <div>
-          <h2 style="font-size:16px;">More Projects</h2>
-          <p>From my GitHub portfolio folders (click to open).</p>
-        </div>
-      </div>
-
-      <div class="grid-2">
-
-        <!-- ER Wait Time Prediction -->
-        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Predict-ing-Emergency-Room-ER-Wait-Time" target="_blank" rel="noreferrer">
-          <div class="box-title">
-            <div>
-              <h3>Predicting Emergency Room (ER) Wait Time</h3>
-              <div class="meta">Linear Regression • Healthcare Analytics</div>
-            </div>
-            <span class="btn ghost" title="Open project">↗</span>
-          </div>
-          <ul class="clean">
-            <li>Built a baseline <strong>Linear Regression</strong> model to predict ER wait time using selected features.</li>
-            <li>Encoded categorical variables like <strong>Time of Day</strong> and <strong>Day of Week</strong>.</li>
-            <li>Evaluated with <strong>MAE, RMSE, and R²</strong> and documented limitations + future improvements.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Regression</span><span class="tag">Healthcare</span>
-          </div>
-        </a>
-
-        <!-- Crime & Socioeconomic Factors -->
-        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Crime-and-Socioeconomic-Factors-in-Washington-D.C.-2024-" target="_blank" rel="noreferrer">
-          <div class="box-title">
-            <div>
-              <h3>Crime & Socioeconomic Factors (Washington, D.C. 2024)</h3>
-              <div class="meta">Imbalanced Classification • Model Comparison</div>
-            </div>
-            <span class="btn ghost" title="Open project">↗</span>
-          </div>
-          <ul class="clean">
-            <li>Compared <strong>PyTorch FNN</strong>, <strong>XGBoost</strong>, and baselines for violent crime detection.</li>
-            <li>Improved recall using <strong>class weights</strong> and <strong>SMOTE</strong>, analyzed precision trade-offs.</li>
-            <li>Documented findings and model-selection insights.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">PyTorch</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span><span class="tag">Classification</span>
-          </div>
-        </a>
-
-        <!-- Retail Sales SQL -->
-        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/SQL_retal_sales_P1" target="_blank" rel="noreferrer">
-          <div class="box-title">
-            <div>
-              <h3>Retail Sales Analysis (SQL)</h3>
-              <div class="meta">SQL • Business Insights</div>
-            </div>
-            <span class="btn ghost" title="Open project">↗</span>
-          </div>
-          <ul class="clean">
-            <li>Analyzed sales, customers, and product trends using structured <strong>SQL queries</strong>.</li>
-            <li>Identified high-value transactions, top customers, popular categories, and peak seasons.</li>
-            <li>Summarized insights for business decision-making.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">SQL</span><span class="tag">Analytics</span><span class="tag">Trends</span><span class="tag">Reporting</span>
-          </div>
-        </a>
-
-        <!-- Diwali Sales Analysis -->
-        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Diwali-sales-analysis" target="_blank" rel="noreferrer">
-          <div class="box-title">
-            <div>
-              <h3>Diwali Sales Analysis</h3>
-              <div class="meta">EDA • Segmentation • Visualization</div>
-            </div>
-            <span class="btn ghost" title="Open project">↗</span>
-          </div>
-          <ul class="clean">
-            <li>Performed seasonal sales analysis and customer segmentation to understand buying behavior.</li>
-            <li>Created insights using trend charts and category performance visualizations.</li>
-            <li>Delivered business-ready summary and key observations.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">EDA</span><span class="tag">Visualization</span><span class="tag">Segmentation</span>
-          </div>
-        </a>
-
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience (ORDER 2) -->
     <section id="experience">
       <div class="section-head">
         <div>
@@ -613,121 +449,187 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
+    <!-- Projects (ORDER 3) -->
+    <section id="projects">
       <div class="section-head">
         <div>
-          <h2>Skills</h2>
-          <p>Tools and technologies I use across engineering, analytics, and ML.</p>
-        </div>
-      </div>
-
-      <div class="grid-3">
-        <div class="card box">
-          <h3>Programming</h3>
-          <div class="tags" style="margin-top:10px">
-            <span class="tag">Python</span><span class="tag">Scala</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span>
-            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">Shell</span><span class="tag">Salesforce</span>
-          </div>
-        </div>
-
-        <div class="card box">
-          <h3>Data Platforms</h3>
-          <div class="tags" style="margin-top:10px">
-            <span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Oracle</span>
-            <span class="tag">Redshift</span><span class="tag">Snowflake</span><span class="tag">MongoDB</span><span class="tag">Schema Design</span>
-          </div>
-        </div>
-
-        <div class="card box">
-          <h3>Cloud • Big Data • BI</h3>
-          <div class="tags" style="margin-top:10px">
-            <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Spark</span><span class="tag">Hadoop</span>
-            <span class="tag">QuickSight</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Looker</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-      <div class="section-head">
-        <div>
-          <h2>Education</h2>
-          <p>Academic foundation in data science and engineering.</p>
+          <h2>Projects</h2>
+          <p>Featured projects + additional projects from my GitHub portfolio.</p>
         </div>
       </div>
 
       <div class="grid-2">
+        <!-- Featured Projects (leave links as # if not available) -->
         <div class="card box">
           <div class="box-title">
-            <div>
-              <h3>Master’s Degree in Data Science</h3>
-              <div class="meta">University of Maryland, Baltimore County (UMBC)</div>
-            </div>
-            <div class="meta">Aug 2024 – May 2026</div>
+            <div><h3>AWS Data Pipeline for Real-Time Sales Analytics</h3><div class="meta">Feb 2025 – Apr 2025</div></div>
+            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
           </div>
-          <p>Focus on machine learning, data engineering, analytics, and applied research.</p>
+          <ul class="clean">
+            <li>Built automated ETL using <strong>AWS Lambda</strong> and <strong>AWS Glue</strong> into an <strong>S3 data lake</strong>.</li>
+            <li>Created <strong>Athena</strong> tables and <strong>QuickSight</strong> dashboards for revenue, orders, churn KPIs.</li>
+            <li>Added validation + error logging, reducing manual correction by <strong>35%</strong>.</li>
+            <li>Optimized Parquet + partitioning, reducing query latency by <strong>40%</strong>.</li>
+          </ul>
+          <div class="tags"><span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">Glue</span><span class="tag">S3</span><span class="tag">Athena</span><span class="tag">QuickSight</span></div>
         </div>
 
         <div class="card box">
           <div class="box-title">
-            <div>
-              <h3>Bachelor’s Degree in Electrical Communication Engineering</h3>
-              <div class="meta">Guru Nanak Institute of Technology</div>
-            </div>
-            <div class="meta">Jul 2020 – Aug 2024</div>
+            <div><h3>Serverless Data Lake for Log Processing & Analytics</h3><div class="meta">Dec 2024 – Jan 2025</div></div>
+            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
           </div>
-          <p>Foundation in engineering, signal processing concepts, and applied computing.</p>
+          <ul class="clean">
+            <li>Ingested logs using <strong>AWS Kinesis</strong> + <strong>Lambda</strong> in near real-time.</li>
+            <li>Stored and analyzed logs in <strong>Amazon Redshift</strong> for historical trends.</li>
+            <li>Implemented <strong>CloudWatch</strong> monitoring and alerting for pipeline health.</li>
+            <li>Optimized schemas + COPY ingestion, reducing load time by <strong>50%</strong>.</li>
+          </ul>
+          <div class="tags"><span class="tag">Kinesis</span><span class="tag">Lambda</span><span class="tag">Redshift</span><span class="tag">CloudWatch</span></div>
+        </div>
+
+        <div class="card box">
+          <div class="box-title">
+            <div><h3>Kafka-Based Transaction Processing Microservice (Spring Boot)</h3><div class="meta">Oct 2024 – Nov 2024</div></div>
+            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
+          </div>
+          <ul class="clean">
+            <li>Built a Spring Boot service consuming high-volume events using <strong>Apache Kafka</strong>.</li>
+            <li>Implemented validation + persistence via <strong>Spring Data JPA</strong> and <strong>H2</strong>.</li>
+            <li>Integrated external Incentive REST API using <strong>RestTemplate</strong>.</li>
+            <li>Verified behavior with <strong>Maven tests</strong> and debugger-driven analysis.</li>
+          </ul>
+          <div class="tags"><span class="tag">Kafka</span><span class="tag">Spring Boot</span><span class="tag">JPA</span><span class="tag">REST</span></div>
+        </div>
+
+        <div class="card box">
+          <div class="box-title">
+            <div><h3>Customer Churn Prediction</h3><div class="meta">Aug 2024 – Oct 2024</div></div>
+            <a class="btn ghost" href="#" title="Replace with your GitHub project link">↗</a>
+          </div>
+          <ul class="clean">
+            <li>Identified key behavioral indicators and performed feature engineering.</li>
+            <li>Built and optimized a <strong>Random Forest</strong> model with <strong>85% accuracy</strong>.</li>
+            <li>Used visualizations to communicate insights clearly to stakeholders.</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Modeling</span><span class="tag">EDA</span></div>
+        </div>
+
+        <!-- GitHub folder projects you provided -->
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Predict-ing-Emergency-Room-ER-Wait-Time" target="_blank" rel="noreferrer">
+          <div class="box-title"><div><h3>Predicting Emergency Room (ER) Wait Time</h3><div class="meta">Linear Regression • Healthcare Analytics</div></div><span class="btn ghost">↗</span></div>
+          <ul class="clean">
+            <li>Built a baseline <strong>Linear Regression</strong> model to predict ER wait time using selected features.</li>
+            <li>Encoded categorical variables like <strong>Time of Day</strong> and <strong>Day of Week</strong>.</li>
+            <li>Evaluated with <strong>MAE, RMSE, and R²</strong> and documented limitations + future improvements.</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Regression</span><span class="tag">Healthcare</span></div>
+        </a>
+
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Crime-and-Socioeconomic-Factors-in-Washington-D.C.-2024-" target="_blank" rel="noreferrer">
+          <div class="box-title"><div><h3>Crime & Socioeconomic Factors (Washington, D.C. 2024)</h3><div class="meta">Imbalanced Classification • Model Comparison</div></div><span class="btn ghost">↗</span></div>
+          <ul class="clean">
+            <li>Compared <strong>PyTorch FNN</strong>, <strong>XGBoost</strong>, and baselines for violent crime detection.</li>
+            <li>Improved recall using <strong>class weights</strong> and <strong>SMOTE</strong>, analyzed precision trade-offs.</li>
+            <li>Documented findings and model-selection insights.</li>
+          </ul>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span><span class="tag">Classification</span></div>
+        </a>
+
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/SQL_retal_sales_P1" target="_blank" rel="noreferrer">
+          <div class="box-title"><div><h3>Retail Sales Analysis (SQL)</h3><div class="meta">SQL • Business Insights</div></div><span class="btn ghost">↗</span></div>
+          <ul class="clean">
+            <li>Analyzed sales, customers, and product trends using structured <strong>SQL queries</strong>.</li>
+            <li>Identified high-value transactions, top customers, popular categories, and peak seasons.</li>
+            <li>Summarized insights for business decision-making.</li>
+          </ul>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">Analytics</span><span class="tag">Trends</span><span class="tag">Reporting</span></div>
+        </a>
+
+        <a class="card box" href="https://github.com/Rithesh4112/Rithesh_portfolio/tree/main/Diwali-sales-analysis" target="_blank" rel="noreferrer">
+          <div class="box-title"><div><h3>Diwali Sales Analysis</h3><div class="meta">EDA • Segmentation • Visualization</div></div><span class="btn ghost">↗</span></div>
+          <ul class="clean">
+            <li>Performed seasonal sales analysis and customer segmentation to understand buying behavior.</li>
+            <li>Created insights using trend charts and category performance visualizations.</li>
+            <li>Delivered business-ready summary and key observations.</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">EDA</span><span class="tag">Visualization</span><span class="tag">Segmentation</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Skills (ORDER 4) -->
+    <section id="skills">
+      <div class="section-head">
+        <div><h2>Skills</h2><p>Tools and technologies I use across engineering, analytics, and ML.</p></div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card box">
+          <h3>Programming Languages</h3>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">Salesforce</span><span class="tag">Python</span><span class="tag">Scala</span><span class="tag">Shell</span><span class="tag">C++</span><span class="tag">C</span>
+            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">Java</span>
+          </div>
+        </div>
+
+        <div class="card box">
+          <h3>Warehousing & Databases</h3>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">Schema Design</span><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Oracle</span><span class="tag">Postgres</span>
+            <span class="tag">Redshift</span><span class="tag">Snowflake</span><span class="tag">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="card box">
+          <h3>Big Data • BI • Cloud</h3>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag">Hadoop</span><span class="tag">Spark</span><span class="tag">QuickSight</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Looker</span>
+            <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Dash</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Certifications -->
+    <!-- Certifications (ORDER 5) -->
     <section id="certs">
       <div class="section-head">
         <div>
           <h2>Certifications</h2>
-          <p>Click any card to view credentials (LinkedIn certifications page).</p>
+          <p>Click to view credentials. (Update each link with your certificate URLs.)</p>
         </div>
       </div>
 
       <div class="grid-3">
-        <a class="card box" href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_caXW8teNpr67FxeJs_1766882871116_completion_certificate.pdf" target="_blank" rel="noreferrer">
-          <h3>JPMorgan Chase Software Engineering Certificate</h3>
-          <p>View Credential ↗</p>
-        </a>
-        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
-          <h3>UMBC Professional Edge</h3>
-          <p>View Credential ↗</p>
-        </a>
-        <a class="card box" href="https://skillshop.credential.net/6d201d7b-a441-4290-b025-785e56bb11c7#acc.bknwHDZj/" target="_blank" rel="noreferrer">
+        <a class="card box" href="https://www.coursera.org/account/accomplishments/verify/4Q4C9LN4GZEY" target="_blank" rel="noreferrer">
           <h3>Google Analytics Certification</h3>
           <p>View Credential ↗</p>
         </a>
-        <a class="card box" href="https://www.coursera.org/account/accomplishments/verify/4Q4C9LN4GZEY" target="_blank" rel="noreferrer">
-          <h3>Data Analytics on AWS</h3>
-          <p>View Credential ↗</p>
-        </a>
-        <a class="card box" href="https://skillshop.credential.net/e7ab25f5-6811-4538-8405-20a88eab832e#acc.DjhnTLb4" target="_blank" rel="noreferrer">
-          <h3>Google – Manage GA4 Data and Read Reports</h3>
-          <p>View Credential ↗</p>
+
+        <!-- Keep others pointing to LinkedIn until you add their links -->
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>JPMorgan Chase Software Engineering Certificate</h3><p>View Credential ↗</p>
         </a>
         <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
-          <h3>Data Science Job Simulation</h3>
-          <p>View Credential ↗</p>
+          <h3>UMBC Professional Edge</h3><p>View Credential ↗</p>
         </a>
-        <a class="card box" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/gabev3vXhuACr48eb_SKZxezskWgmFjRvj9_caXW8teNpr67FxeJs_1747110231318_completion_certificate.pdf" target="_blank" rel="noreferrer">
-          <h3>Generative AI for Data Scientists (Specialization)</h3>
-          <p>View Credential ↗</p>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Analytics on AWS</h3><p>View Credential ↗</p>
         </a>
-        <a class="card box" href="https://www.coursera.org/account/accomplishments/verify/ITTV4FVGFL1W" target="_blank" rel="noreferrer">
-          <h3>Data Analysis, Visualization, and Communication with Copilot</h3>
-          <p>View Credential ↗</p>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Google – Manage GA4 Data and Read Reports</h3><p>View Credential ↗</p>
         </a>
-        <a class="card box" href="https://www.coursera.org/account/accomplishments/verify/EH8V1UUHZPH7" target="_blank" rel="noreferrer">
-          <h3>Data Preparation and Evaluation with Copilot</h3>
-          <p>View Credential ↗</p>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Science Job Simulation</h3><p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Generative AI for Data Scientists (Specialization)</h3><p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Analysis, Visualization, and Communication with Copilot</h3><p>View Credential ↗</p>
+        </a>
+        <a class="card box" href="https://www.linkedin.com/in/rithesh-donthoju/details/certifications/" target="_blank" rel="noreferrer">
+          <h3>Data Preparation and Evaluation with Copilot</h3><p>View Credential ↗</p>
         </a>
       </div>
     </section>
@@ -747,3 +649,4 @@
   </script>
 </body>
 </html>
+```
